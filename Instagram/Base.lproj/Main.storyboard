@@ -8,6 +8,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Coment View Cell View Controller-->
+        <scene sceneID="0WA-h3-7Ew">
+            <objects>
+                <viewController id="J28-wQ-PCp" customClass="ComentViewCellViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B2E-Uo-zvf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0aZ-Yc-1Hc">
+                                <rect key="frame" x="10" y="10" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYy-4Y-Vqd">
+                                <rect key="frame" x="10" y="54" width="394" height="40"/>
+                                <state key="normal" title="コメントする" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="comentButton:" destination="J28-wQ-PCp" eventType="touchUpInside" id="JTq-Tz-2zb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="647-Zs-oRp">
+                                <rect key="frame" x="10" y="104" width="394" height="40"/>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="J28-wQ-PCp" eventType="touchUpInside" id="vsa-cJ-deb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ruD-VY-apk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GYy-4Y-Vqd" firstAttribute="top" secondItem="0aZ-Yc-1Hc" secondAttribute="bottom" constant="10" id="1gy-sW-APx"/>
+                            <constraint firstItem="647-Zs-oRp" firstAttribute="top" secondItem="GYy-4Y-Vqd" secondAttribute="bottom" constant="10" id="763-FJ-O98"/>
+                            <constraint firstItem="647-Zs-oRp" firstAttribute="leading" secondItem="ruD-VY-apk" secondAttribute="leading" constant="10" id="86r-jB-Qhe"/>
+                            <constraint firstItem="ruD-VY-apk" firstAttribute="trailing" secondItem="GYy-4Y-Vqd" secondAttribute="trailing" constant="10" id="8tW-Wa-mx5"/>
+                            <constraint firstItem="ruD-VY-apk" firstAttribute="trailing" secondItem="0aZ-Yc-1Hc" secondAttribute="trailing" constant="10" id="aEi-VE-ZCX"/>
+                            <constraint firstItem="0aZ-Yc-1Hc" firstAttribute="top" secondItem="ruD-VY-apk" secondAttribute="top" constant="10" id="kNq-sP-ujs"/>
+                            <constraint firstItem="GYy-4Y-Vqd" firstAttribute="leading" secondItem="ruD-VY-apk" secondAttribute="leading" constant="10" id="n80-OR-4fc"/>
+                            <constraint firstItem="0aZ-Yc-1Hc" firstAttribute="leading" secondItem="ruD-VY-apk" secondAttribute="leading" constant="10" id="yO8-HE-lXO"/>
+                            <constraint firstItem="ruD-VY-apk" firstAttribute="trailing" secondItem="647-Zs-oRp" secondAttribute="trailing" constant="10" id="zxR-hq-DXM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dyy-W0-IGA"/>
+                    <connections>
+                        <outlet property="comentField" destination="0aZ-Yc-1Hc" id="WJ9-Gb-VUK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cd6-ea-rnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1928" y="875"/>
+        </scene>
         <!--ホーム-->
         <scene sceneID="Pdf-VI-fAC">
             <objects>
@@ -33,6 +84,7 @@
                     <tabBarItem key="tabBarItem" title="ホーム" image="home" id="ukF-2f-Pcm"/>
                     <connections>
                         <outlet property="tableView" destination="XU8-vc-zKY" id="bmR-jy-zhz"/>
+                        <segue destination="J28-wQ-PCp" kind="show" identifier="comentSegue" id="dUT-KM-i1Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3H-p4-oga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

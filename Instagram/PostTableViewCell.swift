@@ -15,6 +15,9 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var comentLabel: UILabel!
+    @IBOutlet weak var comentButton: UIButton!
     
     
     override func awakeFromNib() {
@@ -36,6 +39,9 @@ class PostTableViewCell: UITableViewCell {
 
            // キャプションの表示
            self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
+        
+            
+ 
 
            // 日時の表示
            self.dateLabel.text = ""
@@ -45,6 +51,14 @@ class PostTableViewCell: UITableViewCell {
                let dateString = formatter.string(from: date)
                self.dateLabel.text = dateString
            }
+        
+        
+        let outputText = postData.coment.joined(separator: "\n")
+        
+        
+        //コメント表示
+        self.nameLabel.text = outputText
+    
 
            // いいね数の表示
            let likeNumber = postData.likes.count
@@ -58,6 +72,6 @@ class PostTableViewCell: UITableViewCell {
                let buttonImage = UIImage(named: "like_none")
                self.likeButton.setImage(buttonImage, for: .normal)
            }
+        
        }
-    
 }
