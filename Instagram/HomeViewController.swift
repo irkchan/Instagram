@@ -30,6 +30,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // カスタムセルを登録する
         let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
+        
+        self.tableView.estimatedRowHeight = 90
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
     
     override func viewWillAppear(_ animated: Bool) {

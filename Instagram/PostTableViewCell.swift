@@ -16,7 +16,6 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var comentLabel: UILabel!
     @IBOutlet weak var comentButton: UIButton!
     
     

@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="553" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="Instagram" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="374" height="553"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="565"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="374" height="553"/>
+                <rect key="frame" x="0.0" y="0.0" width="374" height="565"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcV-2y-7nn">
@@ -40,7 +40,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJf-di-Zby">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJf-di-Zby">
                         <rect key="frame" x="30" y="444" width="314" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -57,11 +57,7 @@
                         <color key="tintColor" systemColor="labelColor"/>
                         <state key="normal" backgroundImage="message" catalog="system"/>
                     </button>
-                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="bottom" spacing="226" translatesAutoresizingMaskIntoConstraints="NO" id="zZq-7z-TnA">
-                        <rect key="frame" x="30" y="588" width="41.5" height="20.5"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwX-S2-OtV">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwX-S2-OtV">
                         <rect key="frame" x="30" y="474.5" width="314" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
@@ -87,6 +83,7 @@
                     <constraint firstItem="BjG-7R-Fd5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZX8-e7-Jae"/>
                     <constraint firstItem="bcV-2y-7nn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ZgH-ZQ-GQS"/>
                     <constraint firstItem="BjG-7R-Fd5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="a3P-qc-Ugs"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="zwX-S2-OtV" secondAttribute="bottom" constant="10" id="cUu-1J-iNR"/>
                     <constraint firstItem="RiK-Om-ZGf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hdi-ya-Sz6"/>
                     <constraint firstItem="9Qq-M3-ecB" firstAttribute="leading" secondItem="L2g-YC-acy" secondAttribute="trailing" constant="10" id="hwu-9g-4sp"/>
                     <constraint firstItem="PJf-di-Zby" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="mZy-R6-i2L"/>
@@ -107,7 +104,7 @@
                 <outlet property="nameLabel" destination="zwX-S2-OtV" id="zfr-Hm-bxr"/>
                 <outlet property="postImageView" destination="bcV-2y-7nn" id="mpC-1C-YFl"/>
             </connections>
-            <point key="canvasLocation" x="227.536231884058" y="258.14732142857144"/>
+            <point key="canvasLocation" x="227.536231884058" y="258.81696428571428"/>
         </tableViewCell>
     </objects>
     <resources>
